@@ -1,0 +1,11 @@
+//This Prisma Schema is Specific for MongoDB Database
+
+generator client {
+  provider = "prisma-client-js"
+  output   = "./generated/client_mongoDb"
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
